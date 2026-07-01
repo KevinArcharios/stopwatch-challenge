@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stopwatch Challenge</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="title-row">
+			<h1>⏱ Stopwatch Challenge</h1>
+			<button id="best-score-btn" class="btn-trophy" title="Lihat Best Score">
+				🏆
+			</button>
+		</div>
+
+		<!-- Mode -->
+		<div class="mode">
+			<button id="normal" class="active">Normal</button>
+			<button id="blind">Blind</button>
+		</div>
+
+		<!-- Target & Guess -->
+		<div class="cards-col">
+			<div class="card">
+				<span class="card-label">Target</span>
+				<p class="card-time target-time">--:--:--</p>
+			</div>
+			<div class="card">
+				<span class="card-label">Your Time</span>
+				<p class="card-time guess-time">00:00:00</p>
+			</div>
+		</div>
+
+		<!-- Start / Stop -->
+		<button id="start" class="btn-start">Start</button>
+		<p class="hint">atau tekan <kbd>Spasi</kbd></p>
+
+		<!-- Result -->
+		<div id="result-modal" class="overlay">
+			<div class="modal">
+				<p class="modal-label">Hasil</p>
+
+				<div class="result-times">
+					<div class="rt-block">
+						<span class="rt-label">Target</span>
+						<span id="modal-target" class="rt-val">--</span>
+					</div>
+					<div class="rt-divider">→</div>
+					<div class="rt-block">
+						<span class="rt-label">Guess</span>
+						<span id="modal-guess" class="rt-val">--</span>
+					</div>
+				</div>
+
+				<div class="diff-box">
+					<span class="diff-label">Selisih</span>
+					<span id="modal-diff" class="diff-val">--</span>
+				</div>
+
+				<div id="modal-rating" class="badge">--</div>
+				<p id="modal-rank" class="rank-text"></p>
+				<p id="modal-msg" class="modal-msg"></p>
+
+				<button id="modal-close" class="btn-primary">Main Lagi</button>
+			</div>
+		</div>
+
+		<!-- Best Score -->
+		<div id="best-modal" class="overlay">
+			<div class="modal modal--wide">
+				<p class="modal-label">Top 10</p>
+
+				<div class="bs-tabs">
+					<button id="bs-tab-normal" class="bs-tab active">Normal</button>
+					<button id="bs-tab-blind" class="bs-tab">Blind</button>
+				</div>
+
+				<div id="bs-panel-normal" class="bs-panel">
+					<p id="bs-normal-empty" class="bs-empty">
+						Belum ada skor. Main dulu!
+					</p>
+					<ol id="bs-normal-list" class="bs-list"></ol>
+				</div>
+				<div id="bs-panel-blind" class="bs-panel hidden">
+					<p id="bs-blind-empty" class="bs-empty">
+						Belum ada skor. Coba Blind Mode!
+					</p>
+					<ol id="bs-blind-list" class="bs-list"></ol>
+				</div>
+
+				<div class="modal-footer">
+					<button id="bs-reset" class="btn-danger">Reset Skor</button>
+					<button id="bs-close" class="btn-primary">Tutup</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

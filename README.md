@@ -24,8 +24,10 @@ Gampang banget, kamu enggak perlu install apa-apa:
 ## 🌐 Live Demo
 Males buat clone kodenya? Tenang, kamu bisa langsung coba versi online-nya di sini:
 👉 
+
 ------------------------------
 Silakan dipelajari kodenya, dan kalau kamu punya saran buat optimasi logikanya, feel free buat buka Issue atau Pull Request ya! Cherrs! 🍻
+
 ------------------------------
 
 
